@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursed Recipe Roulette - Apocalypse Kitchen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Electrolize&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    
+    <div class="app-container">
+        <h1 class="main-title neon-glow">CURSED RECIPE ROULETTE</h1>
+        <p class="subtitle">🔥 APOCALYPSE KITCHEN: WHERE RECIPES GO TO DIE 🔥</p>
+        
+        <div class="generator-section">
+            <div class="cursedness-meter">
+                <div class="cursedness-label">CURSEDNESS LEVEL: <span id="cursedness-level">0</span>/20</div>
+                <div class="cursedness-bar">
+                    <div class="cursedness-fill" id="cursedness-fill"></div>
+                </div>
+            </div>
+            
+            <div class="roulette-wheel" id="roulette-wheel"></div>
+            
+            <button class="generate-btn" id="generate-btn">
+                <span id="btn-text">START COOKING CHAOS</span>
+            </button>
+            
+            <div class="loading-spinner" id="loading-spinner"></div>
+        </div>
+        
+        <div class="recipe-container" id="recipe-container">
+            <h2 class="recipe-title" id="recipe-title">YOUR CURSED CREATION</h2>
+            
+            <div class="recipe-ingredients">
+                <h3>🧪 CURSED INGREDIENTS</h3>
+                <ul class="ingredient-list" id="ingredient-list"></ul>
+            </div>
+            
+            <div class="recipe-instructions">
+                <h3>💀 APOCALYPTIC INSTRUCTIONS</h3>
+                <ol class="instruction-list" id="instruction-list"></ol>
+            </div>
+        </div>
+        
+        <div class="upload-section">
+            <h2 class="upload-title">🔥 I COOKED THIS IRL 🔥</h2>
+            <p class="mb-16">Upload proof of your cursed creation to unlock achievements!</p>
+            <input type="file" class="file-input" id="photo-input" accept="image/*">
+            <button class="upload-btn" onclick="document.getElementById('photo-input').click()">UPLOAD CHAOS PROOF</button>
+            <div id="upload-status"></div>
+        </div>
+        
+        <div class="achievements-section">
+            <h2 class="achievements-title">🏆 APOCALYPSE ACHIEVEMENTS 🏆</h2>
+            <div class="achievements-grid" id="achievements-grid"></div>
+        </div>
+    </div>
+    
+    <div class="achievement-popup" id="achievement-popup">
+        <div class="popup-title">ACHIEVEMENT UNLOCKED!</div>
+        <div class="popup-icon" id="popup-icon"></div>
+        <div class="popup-name" id="popup-name"></div>
+        <div class="popup-desc" id="popup-desc"></div>
+        <button class="popup-close" onclick="closeAchievementPopup()">CONTINUE CHAOS</button>
+    </div>
+    
+    <div class="glitch-overlay" id="glitch-overlay"></div>
+    
+    <div class="error-message" id="error-message"></div>
+    
+    <script src="script.js" defer></script>
+</body>
+</html>
